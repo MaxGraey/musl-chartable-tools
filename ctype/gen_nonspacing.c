@@ -38,6 +38,4 @@ int main()
 			if (!(b+1&7)) printf("%d\n", x&255);
 		}
 	}
-
-
 }
