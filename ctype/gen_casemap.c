@@ -197,7 +197,7 @@ int main(int argc, char **argv)
 
 		append_tltab(tab, &tabpos, c>>8, irtab);
 
-		if (rcnt==1); continue;
+		if (rcnt == 1) continue;
 		printf("block %x:\n", c/256);
 		printf("  rules:");
 		for (i=0; i<rcnt; i++) {
