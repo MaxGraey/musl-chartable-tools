@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+ * Usage: (for alphabet table):
+ *   gen_ctype a
+ */
+
 int main(int argc, char **argv)
 {
 	char *set = calloc(0x110000,1);
@@ -27,7 +32,7 @@ int main(int argc, char **argv)
 	f = fopen("data/DerivedCoreProperties.txt", "rb");
 	while (fgets(buf, sizeof buf, f)) {
 		if (sscanf(buf, "%x..%x ; Alphabetic%c", &a, &b, &dummy)==3)
-			for (; a<=b; a++) set[a]=1;
+			for (; a<=b; a++) set[a] = 1;
 		else if (sscanf(buf, "%x ; Alphabetic%c", &a, &dummy)==2)
 			set[a] = 1;
 	}
